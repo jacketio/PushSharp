@@ -25,7 +25,7 @@ namespace PushSharp.Core
 		public event NotificationSentDelegate OnNotificationSent;
 		public event NotificationFailedDelegate OnNotificationFailed;
 		public event NotificationRequeueDelegate OnNotificationRequeue;
-		public event ChannelExceptionDelegate OnChannelException;
+        public event ChannelExceptionDelegate OnChannelException { add { } remove { } }
 		public event ServiceExceptionDelegate OnServiceException;
 		public event DeviceSubscriptionExpiredDelegate OnDeviceSubscriptionExpired;
 		public event DeviceSubscriptionChangedDelegate OnDeviceSubscriptionChanged;

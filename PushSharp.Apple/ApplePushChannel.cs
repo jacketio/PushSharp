@@ -99,10 +99,7 @@ namespace PushSharp.Apple
 			lock (sentLock)
 			{
 				Interlocked.Increment(ref trackedNotificationCount);
-
 				var appleNotification = notification as AppleNotification;
-				
-				bool isOkToSend = true;
 				byte[] notificationData = new byte[] {};
 
 				try
@@ -112,8 +109,6 @@ namespace PushSharp.Apple
 				catch (NotificationFailureException nfex)
 				{
 					//Bad notification format already
-					isOkToSend = false;
-
 					Interlocked.Decrement(ref trackedNotificationCount);
 					
 					if (callback != null)

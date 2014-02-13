@@ -22,8 +22,8 @@ obj
 TestResults
 test-results
 
-#NuGet
-packages/
+# NuGet
+# packages/
 
 Xamarin/
 PushSharp.Sample.LocalTesting/
